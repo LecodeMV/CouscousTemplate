@@ -109,7 +109,7 @@ pre code {
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-    color: #23A96E;
+    color: darkcyan;
 }
 
 .nav>li>a {
@@ -119,11 +119,11 @@ pre code {
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    color: #23A96E;
+    color: darkcyan;
 }
 
 a {
-    color: #23A96E;
+    color: darkcyan;
 }
 
 a:hover, a:focus {
@@ -131,7 +131,7 @@ a:hover, a:focus {
 }
 
 .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
-    background-color: #23A96E;
+    background-color: darkcyan;
 }
 
 code {
