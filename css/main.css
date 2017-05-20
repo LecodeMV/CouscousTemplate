@@ -151,3 +151,22 @@ pre {
 b, strong {
     color: #bbb;
 }
+
+#sidebar {
+    max-height: 80vh;
+    overflow: auto;
+}
+
+::-webkit-scrollbar-track {}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #2E2F31;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: darkcyan;
+}
