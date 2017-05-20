@@ -25,9 +25,7 @@
             {% if icons is defined %}
                 <ul class="nav navbar-nav navbar-right">
                 {% for element in icons %}
-                    <li><a href="{{element.link}}">
-                        <img src="{{element.src}}" alt="{{element.alt}}"></span> {{element.text}}
-                    </a></li>
+                    <li><a href="{{element.link}}"><span class="glyphicon {{element.glyph}}"></span> {{element.text}}</a></li>
                 {% endfor %}
                 </ul>
             {% endif %}
