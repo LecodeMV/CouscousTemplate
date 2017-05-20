@@ -23,11 +23,13 @@
             </a>
 
             {% if icons is defined %}
+                <ul class="nav navbar-nav navbar-right">
                 {% for element in icons %}
-                    <a href="{{element.link}}">
-                        <img style="position: absolute; top: 0; right: 0; border: 0;" src="{{element.src}}" alt="{{element.alt}}">
-                    </a>
+                    <li><a href="{{element.link}}">
+                        <img src="{{element.src}}" alt="{{element.alt}}"></span> {{element.text}}
+                    </a></li>
                 {% endfor %}
+                </ul>
             {% endif %}
 
             {% if github is defined %}
