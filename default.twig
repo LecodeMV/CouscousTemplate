@@ -63,13 +63,18 @@
                             </ul>
                         {% endfor %}
 
+                        <p class="text-muted">
+                            {{ menu.lower_section.title }}
+                        </p>
                         <ul class="nav nav-pills nav-stacked">
                             {% for itemId, item in menu.lower_section %}
-                                <li class="{{ itemId == currentMenu ? 'active' }}">
-                                    <a href="{{ item.absoluteUrl|default(baseUrl ~ '/' ~ item.relativeUrl) }}">
-                                        <img src="{{item.icon}}"> {{ item.text|raw }}
-                                    </a>
-                                </li>
+                                {% if item.icon is defined %}
+                                    <li class="{{ itemId == currentMenu ? 'active' }}">
+                                        <a href="{{ item.absoluteUrl|default(baseUrl ~ '/' ~ item.relativeUrl) }}">
+                                            <img src="{{item.icon}}"> {{ item.text|raw }}
+                                        </a>
+                                    </li>
+                                {% endif %}
                             {% endfor %}
                         </ul>
 
