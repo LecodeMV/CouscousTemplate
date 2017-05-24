@@ -5,17 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>{{ title }}</title>
-        
-        <link rel="stylesheet" href="{{ baseUrl }}/css/bootstrap.min.css">
-        <link rel="stylesheet" href="{{ baseUrl }}/css/font-awesome.min.css">
-        <link rel="stylesheet" href="{{ baseUrl }}/css/highlight.dark.css">
-        <link rel="stylesheet" href="{{ baseUrl }}/css/main.css">
+
+        <link rel="stylesheet" href="{{ fkcingBaseUrl }}/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ fkcingBaseUrl }}/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{{ fkcingBaseUrl }}/css/highlight.dark.css">
+        <link rel="stylesheet" href="{{ fkcingBaseUrl }}/css/main.css">
     </head>
     <body>
-        <h1>{{ baseUrl }}</h1>
+
         <header class="navbar navbar-default navbar-fixed-top">
 
-            <a class="navbar-brand" href="{{ baseUrl }}/">
+            <a class="navbar-brand" href="{{ fkcingBaseUrl }}/">
                 {{ title|default('The title') }}
                 <small class="hidden-xs hidden-sm">
                     {{ subTitle|default('This is the default subtitle!') }}
@@ -40,7 +40,7 @@
                         <ul class="nav nav-pills nav-stacked">
                             {% for itemId, item in menu.upper_section %}
                                 <li class="{{ itemId == currentMenu ? 'active' }}">
-                                    <a href="{{ item.absoluteUrl|default(baseUrl ~ '/' ~ item.relativeUrl) }}">
+                                    <a href="{{ item.absoluteUrl|default(fkcingBaseUrl ~ '/' ~ item.relativeUrl) }}">
                                         {{ item.text|raw }}
                                     </a>
                                 </li>
@@ -55,7 +55,7 @@
                             <ul class="nav nav-pills nav-stacked">
                                 {% for itemId, item in section.items %}
                                     <li class="{{ itemId == currentMenu ? 'active' }}">
-                                        <a href="{{ item.absoluteUrl|default(baseUrl ~ '/' ~ item.relativeUrl) }}">
+                                        <a href="{{ item.absoluteUrl|default(fkcingBaseUrl ~ '/' ~ item.relativeUrl) }}">
                                             {{ item.text|raw }}
                                         </a>
                                     </li>
@@ -70,7 +70,7 @@
                             {% for itemId, item in menu.lower_section %}
                                 {% if item.icon is defined %}
                                     <li class="{{ itemId == currentMenu ? 'active' }}">
-                                        <a href="{{ item.absoluteUrl|default(baseUrl ~ '/' ~ item.relativeUrl) }}">
+                                        <a href="{{ item.absoluteUrl|default(fkcingBaseUrl ~ '/' ~ item.relativeUrl) }}">
                                             <img src="{{item.icon}}"> {{ item.text|raw }}
                                         </a>
                                     </li>
